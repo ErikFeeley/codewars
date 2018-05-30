@@ -37,4 +37,12 @@ multiply3sOr5sTests =
             \_ ->
                 CodeWars.multiply3sOr5s 200
                     |> Expect.equal 9168
+        , test "with other guy" <|
+            \_ ->
+                CodeWars.testGuy 200
+                    |> Expect.equal 9168
+        , test "wither better other guy" <|
+            \_ ->
+                CodeWars.betterTestGuy 200
+                    |> Expect.equal 9168
         ]
