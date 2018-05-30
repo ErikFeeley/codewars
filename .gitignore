@@ -1,0 +1,45 @@
+haskell-codewars.cabal
+*~
+
+
+# Created by https://www.gitignore.io/api/elm,haskell,visualstudiocode
+
+### Elm ###
+# elm-package generated files
+elm-stuff
+elm.js
+# elm-repl generated files
+repl-temp-*
+
+### Haskell ###
+dist
+dist-*
+cabal-dev
+*.o
+*.hi
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+.hpc
+.hsenv
+.cabal-sandbox/
+cabal.sandbox.config
+*.prof
+*.aux
+*.hp
+*.eventlog
+.stack-work/
+cabal.project.local
+.HTF/
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
+
+
+# End of https://www.gitignore.io/api/elm,haskell,visualstudiocode
