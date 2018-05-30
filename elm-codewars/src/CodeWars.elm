@@ -42,3 +42,25 @@ betterTestGuy num =
                     y
             )
             0
+
+
+finalTest : Int -> Int
+finalTest num =
+    filteredRange (\x -> x % 3 == 0 || x % 5 == 0) 1 (num - 1)
+        |> List.sum
+
+
+filteredRange : (Int -> Bool) -> Int -> Int -> List Int
+filteredRange fn lo hi =
+    filteredRangeHelp fn lo hi []
+
+
+filteredRangeHelp : (Int -> Bool) -> Int -> Int -> List Int -> List Int
+filteredRangeHelp fn lo hi list =
+    if lo <= hi then
+        if fn hi then
+            filteredRangeHelp fn lo (hi - 1) ((::) hi list)
+        else
+            filteredRangeHelp fn lo (hi - 1) list
+    else
+        list
