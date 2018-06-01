@@ -67,23 +67,21 @@ filteredRangeHelp fn lo hi list =
 
 
 getVowelCount : String -> Int
-getVowelCount str =
-    str
-        |> String.filter (\x -> String.contains (String.fromChar x) "aeiou")
-        |> String.length
+getVowelCount =
+    String.filter (\x -> String.contains (String.fromChar x) "aeiou")
+        >> String.length
 
 
 getVowelCount2 : String -> Int
-getVowelCount2 str =
-    str
-        |> String.foldl
-            (\char total ->
-                if isVowel char then
-                    total + 1
-                else
-                    total
-            )
-            0
+getVowelCount2 =
+    String.foldl
+        (\char total ->
+            if isVowel char then
+                total + 1
+            else
+                total
+        )
+        0
 
 
 isVowel : Char -> Bool
