@@ -46,3 +46,21 @@ multiply3sOr5sTests =
                 CodeWars.betterTestGuy 200
                     |> Expect.equal 9168
         ]
+
+
+vowelCountTests : Test
+vowelCountTests =
+    describe "test vowel counts"
+        [ test "should be 2 for ape" <|
+            \_ ->
+                CodeWars.getVowelCount2 "ape"
+                    |> Expect.equal 2
+        , test "banana should be 3" <|
+            \_ ->
+                CodeWars.getVowelCount2 "banana"
+                    |> Expect.equal 3
+        , test "abracadabra should be 5" <|
+            \_ ->
+                CodeWars.getVowelCount2 "abracadabra"
+                    |> Expect.equal 5
+        ]

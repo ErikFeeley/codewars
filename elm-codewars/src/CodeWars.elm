@@ -64,3 +64,28 @@ filteredRangeHelp fn lo hi list =
             filteredRangeHelp fn lo (hi - 1) list
     else
         list
+
+
+getVowelCount : String -> Int
+getVowelCount str =
+    str
+        |> String.filter (\x -> String.contains (String.fromChar x) "aeiou")
+        |> String.length
+
+
+getVowelCount2 : String -> Int
+getVowelCount2 str =
+    str
+        |> String.foldl
+            (\char total ->
+                if isVowel char then
+                    total + 1
+                else
+                    total
+            )
+            0
+
+
+isVowel : Char -> Bool
+isVowel c =
+    String.contains (String.fromChar c) "aeiou"
