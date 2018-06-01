@@ -15,3 +15,6 @@ solution int =
 solution2ListComprehension :: Integer -> Integer
 solution2ListComprehension number = sum [n | n <- [1..number - 1], n `mod` 3 == 0 || n `mod` 5 == 0]
 
+-- vowel count
+getCount :: String -> Int
+getCount = length . filter (\x -> elem x "aeiou")
